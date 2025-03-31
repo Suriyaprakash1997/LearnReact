@@ -23,7 +23,7 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/ComponentClass">Class Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ComponentFunctional">Functional Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ImperativeDeclarative">Imperative & Declarative</Link></li>
-            <li className="nav-item"><Link className="nav-link text-white" to="/PropsState">PropsState</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/PropsState">Props State</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UseStateComponent">Hook useState</Link></li>
           </ul>
         </nav>

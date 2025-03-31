@@ -18,7 +18,8 @@ export default function ContactForm() {
     };
 
     return (
-        <div
+        <><h1  style={{
+          marginBottom: "5px"}}>Hooks useState</h1><div
             style={{
                 maxWidth: "420px",
                 margin: "auto",
@@ -45,8 +46,7 @@ export default function ContactForm() {
                         border: "none",
                         borderRadius: "6px",
                         fontSize: "16px",
-                    }}
-                />
+                    }} />
                 <input
                     type="email"
                     name="email"
@@ -61,8 +61,7 @@ export default function ContactForm() {
                         border: "none",
                         borderRadius: "6px",
                         fontSize: "16px",
-                    }}
-                />
+                    }} />
                 <textarea
                     name="message"
                     placeholder="Your Message"
@@ -99,6 +98,6 @@ export default function ContactForm() {
                     🚀 Send Message
                 </button>
             </form>
-        </div>
+        </div></>
     );
 }
