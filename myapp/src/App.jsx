@@ -1,10 +1,6 @@
 import Home from './Component/Home'
-import ComponentClass from './Component/ComponentClass'
-import ComponentFunctional from './Component/ComponentFunctional'
 //import './App.css'
-
-import Role from './Component/Role'
-import PropsState from './Component/PropsState'
+import UseStateComponent from "./Component/Hooks/useState";
 function App() {
 
   return (
@@ -25,8 +21,9 @@ function App() {
         </div>
         </div> */}
         <div>
-           <Role/> 
-          <PropsState/>
+           {/* <Role/> 
+          <PropsState/> */}
+          <UseStateComponent/>
         </div>
         </div>
     </>

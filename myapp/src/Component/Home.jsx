@@ -1,7 +1,7 @@
 const Home = () => {
     return (
         <div>
-            <h1>React Components</h1>
+            <h2><b>Hooks :</b> useState</h2>
         </div>
     );
 };
