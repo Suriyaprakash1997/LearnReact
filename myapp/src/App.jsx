@@ -4,6 +4,7 @@ import ComponentClass from "./Component/ComponentClass";
 import ComponentFunctional from "./Component/ComponentFunctional";
 import ImperativeDeclarative from "./Component/Imperative&Declarative";
 import PropsState from "./Component/PropsState";
+import UseRefComponent from "./Component/Hooks/useRef";
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -25,6 +26,7 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/ImperativeDeclarative">Imperative & Declarative</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/PropsState">Props State</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UseStateComponent">Hook useState</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/useRefComponent">Hook useRef</Link></li>
           </ul>
         </nav>
 
@@ -37,6 +39,7 @@ function App() {
             <Route path="/PropsState" element={<PropsState />} />
             <Route path="/ImperativeDeclarative" element={<ImperativeDeclarative />} />
             <Route path="/UseStateComponent" element={<UseStateComponent />} />
+            <Route path="/useRefComponent" element={<UseRefComponent />} />
           </Routes>
         </div>
       </div>
