@@ -5,15 +5,17 @@ import ComponentFunctional from "./Component/ComponentFunctional";
 import ImperativeDeclarative from "./Component/Imperative&Declarative";
 import PropsState from "./Component/PropsState";
 import UseRefComponent from "./Component/Hooks/useRef";
+import User from './Component/User';
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
+import  {AuthProvider}  from './context/AuthContext';
 
 function App() {
   return (
+    <AuthProvider>
     <Router>
       <div className="d-flex">
         {/* Sidebar */}
@@ -27,6 +29,7 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/PropsState">Props State</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UseStateComponent">Hook useState</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/useRefComponent">Hook useRef</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/user">User (useContext)</Link></li>
           </ul>
         </nav>
 
@@ -40,10 +43,13 @@ function App() {
             <Route path="/ImperativeDeclarative" element={<ImperativeDeclarative />} />
             <Route path="/UseStateComponent" element={<UseStateComponent />} />
             <Route path="/useRefComponent" element={<UseRefComponent />} />
+            <Route path="/user" element={<User />} />
           </Routes>
         </div>
       </div>
     </Router>
+    </AuthProvider>
+
   );
 }
 
