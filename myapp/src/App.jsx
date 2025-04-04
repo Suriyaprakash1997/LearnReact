@@ -6,6 +6,8 @@ import ImperativeDeclarative from "./Component/Imperative&Declarative";
 import PropsState from "./Component/PropsState";
 import UseRefComponent from "./Component/Hooks/useRef";
 import User from './Component/User';
+import ControlledComponent from './Component/ControlledComponent';
+import UNcontrolledComponent from './Component/UNcontrolledComponent';
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -30,6 +32,8 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/UseStateComponent">Hook useState</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/useRefComponent">Hook useRef</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/user">User (useContext)</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/ControlledComponent">Controlled Component</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/UNcontrolledComponent">Un controlled Component</Link></li>
           </ul>
         </nav>
 
@@ -44,6 +48,8 @@ function App() {
             <Route path="/UseStateComponent" element={<UseStateComponent />} />
             <Route path="/useRefComponent" element={<UseRefComponent />} />
             <Route path="/user" element={<User />} />
+            <Route path="/ControlledComponent" element={<ControlledComponent />} />
+            <Route path="/UNcontrolledComponent" element={<UNcontrolledComponent />} />
           </Routes>
         </div>
       </div>
