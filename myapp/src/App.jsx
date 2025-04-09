@@ -8,6 +8,8 @@ import UseRefComponent from "./Component/Hooks/useRef";
 import User from './Component/User';
 import ControlledComponent from './Component/ControlledComponent';
 import UNcontrolledComponent from './Component/UNcontrolledComponent';
+import ValidationComponent from './Component/Form Validation/Validation';
+import FruitCheckboxList from './Component/task';
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -34,6 +36,8 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/user">User (useContext)</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ControlledComponent">Controlled Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UNcontrolledComponent">Un controlled Component</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/ValidationComponent">Form Validation</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/FruitCheckboxList">Fruits List</Link></li>
           </ul>
         </nav>
 
@@ -50,6 +54,8 @@ function App() {
             <Route path="/user" element={<User />} />
             <Route path="/ControlledComponent" element={<ControlledComponent />} />
             <Route path="/UNcontrolledComponent" element={<UNcontrolledComponent />} />
+            <Route path="/ValidationComponent" element={<ValidationComponent />} />
+            <Route path="/FruitCheckboxList" element={<FruitCheckboxList />} />
           </Routes>
         </div>
       </div>
