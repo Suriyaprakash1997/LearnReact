@@ -11,6 +11,9 @@ import UNcontrolledComponent from './Component/UNcontrolledComponent';
 import ValidationComponent from './Component/Form Validation/Validation';
 import FruitCheckboxList from './Component/task';
 import UserCard from './Component/ListKeys';
+import Promises from './Component/Promises/Promises';
+import RandomUserCard from './Component/TodoComponent';
+import SWRRandomUserCard from './Component/SWRRandomUserCard';
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
@@ -24,7 +27,7 @@ function App() {
     <Router>
       <div className="d-flex">
         {/* Sidebar */}
-        <nav className="bg-dark text-white p-3 vh-100" style={{ width: "250px" }}>
+        <nav className="bg-dark text-white p-3 vh-200" style={{ width: "250px" }}>
           <h4>React App</h4>
           <ul className="nav flex-column">
             <li className="nav-item"><Link className="nav-link text-white" to="/HomeComponent">Home</Link></li>
@@ -40,6 +43,9 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/ValidationComponent">Form Validation</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/FruitCheckboxList">Fruits List</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UserCard">List & Keys</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/Promises">Promises</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/RandomUserCard">Todo(Fetch Methods)</Link></li>
+            { <li className="nav-item"><Link className="nav-link text-white" to="/SWRRandomUserCard">RandomUserCard SWR</Link></li>}
           </ul>
         </nav>
 
@@ -59,6 +65,9 @@ function App() {
             <Route path="/ValidationComponent" element={<ValidationComponent />} />
             <Route path="/FruitCheckboxList" element={<FruitCheckboxList />} />
             <Route path="/UserCard" element={<UserCard />} />
+            <Route path="/Promises" element={<Promises />} />
+            <Route path="/RandomUserCard" element={<RandomUserCard />} />
+            { <Route path="/SWRRandomUserCard" element={<SWRRandomUserCard />} />}
           </Routes>
         </div>
       </div>
