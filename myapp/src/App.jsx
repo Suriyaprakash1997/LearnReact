@@ -14,14 +14,17 @@ import UserCard from './Component/ListKeys';
 import Promises from './Component/Promises/Promises';
 import RandomUserCard from './Component/TodoComponent';
 import SWRRandomUserCard from './Component/SWRRandomUserCard';
+import Master from './Component/Master';
+import Products from './Component/Products';
 import './App.css'
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link,NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import  {AuthProvider}  from './context/AuthContext';
 
 function App() {
+
   return (
     <AuthProvider>
     <Router>
@@ -37,7 +40,7 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/PropsState">Props State</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UseStateComponent">Hook useState</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/useRefComponent">Hook useRef</Link></li>
-            <li className="nav-item"><Link className="nav-link text-white" to="/user">User (useContext)</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to={`/user/${name}/${city}`}>User (useContext)</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ControlledComponent">Controlled Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UNcontrolledComponent">Un controlled Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ValidationComponent">Form Validation</Link></li>
@@ -46,13 +49,15 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/Promises">Promises</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/RandomUserCard">Todo(Fetch Methods)</Link></li>
             { <li className="nav-item"><Link className="nav-link text-white" to="/SWRRandomUserCard">RandomUserCard SWR</Link></li>}
+            <li className="nav-item"><NavLink to="/master" className={({ isActive }) => isActive ? "active" : "nonactive"}>Master</NavLink></li>
+            <li className="nav-item"><NavLink to="/product" className={({ isActive }) => isActive ? "active" : "nonactive"}>Product</NavLink></li>
           </ul>
         </nav>
 
         {/* Main Content */}
         <div className="flex-grow-1 p-4">
           <Routes>
-            <Route path="/HomeComponent" element={<HomeComponent />} />
+            <Route  path="/HomeComponent" element={<HomeComponent />} />
             <Route path="/ComponentClass" element={<ComponentClass />} />
             <Route path="/ComponentFunctional" element={<ComponentFunctional />} />
             <Route path="/PropsState" element={<PropsState />} />
@@ -60,6 +65,7 @@ function App() {
             <Route path="/UseStateComponent" element={<UseStateComponent />} />
             <Route path="/useRefComponent" element={<UseRefComponent />} />
             <Route path="/user" element={<User />} />
+            <Route path="/user/:name/:city" element={<User />} />
             <Route path="/ControlledComponent" element={<ControlledComponent />} />
             <Route path="/UNcontrolledComponent" element={<UNcontrolledComponent />} />
             <Route path="/ValidationComponent" element={<ValidationComponent />} />
@@ -68,6 +74,8 @@ function App() {
             <Route path="/Promises" element={<Promises />} />
             <Route path="/RandomUserCard" element={<RandomUserCard />} />
             { <Route path="/SWRRandomUserCard" element={<SWRRandomUserCard />} />}
+            <Route path="/master" element={<Master />} />
+            <Route path="/product" element={<Products />} />
           </Routes>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import { useEffect } from "react";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate,useLocation,useParams } from "react-router-dom";
 
 import { useAuth } from "../context/AuthContext"
 interface userModel{
@@ -8,10 +8,11 @@ interface userModel{
 }
 const User=()=>{
     const navigate=useNavigate()
+    const {name,city}=useParams()
     const location = useLocation();
     const{user}=useAuth();
     const handleNavigate=()=>{
-        navigate('/HomeComponent')
+        navigate('/master')
     }
     useEffect(()=>{
           console.log("Location:",location);
@@ -20,7 +21,10 @@ const User=()=>{
     return(
         <>
          <h1>User</h1>
-         <p>Welcome, {user.userName}</p>
+         {name&&
+           <p>Welcome, {name} from {city}</p>
+         }
+       
          <button className="btn btn-primary" onClick={handleNavigate}> Navigate</button>
         </>
     )
