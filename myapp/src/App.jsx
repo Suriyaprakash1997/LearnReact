@@ -40,7 +40,7 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/PropsState">Props State</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UseStateComponent">Hook useState</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/useRefComponent">Hook useRef</Link></li>
-            <li className="nav-item"><Link className="nav-link text-white" to={`/user/${name}/${city}`}>User (useContext)</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to={`/user`}>User (useContext)</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ControlledComponent">Controlled Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/UNcontrolledComponent">Un controlled Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ValidationComponent">Form Validation</Link></li>
