@@ -16,6 +16,7 @@ import RandomUserCard from './Component/TodoComponent';
 import SWRRandomUserCard from './Component/SWRRandomUserCard';
 import Master from './Component/Master';
 import Products from './Component/Products';
+import ItemListManager from './Component/ListManager';
 import AddProduct from './Component/AddProduct';  
 import './App.css'
 import React from "react";
@@ -49,9 +50,10 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/UserCard">List & Keys</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/Promises">Promises</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/RandomUserCard">Todo(Fetch Methods)</Link></li>
-            { <li className="nav-item"><Link className="nav-link text-white" to="/SWRRandomUserCard">RandomUserCard SWR</Link></li>}
+            <li className="nav-item"><Link className="nav-link text-white" to="/SWRRandomUserCard">RandomUserCard SWR</Link></li>
             <li className="nav-item"><NavLink to="/master" className={({ isActive }) => isActive ? "active" : "nonactive"}>Master</NavLink></li>
             <li className="nav-item"><NavLink to="/product" className={({ isActive }) => isActive ? "active" : "nonactive"}>Product</NavLink></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/ItemListManager">Item List</Link></li>
           </ul>
         </nav>
 
@@ -74,9 +76,10 @@ function App() {
             <Route path="/UserCard" element={<UserCard />} />
             <Route path="/Promises" element={<Promises />} />
             <Route path="/RandomUserCard" element={<RandomUserCard />} />
-            { <Route path="/SWRRandomUserCard" element={<SWRRandomUserCard />} />}
+            <Route path="/SWRRandomUserCard" element={<SWRRandomUserCard />} />
             <Route path="/master" element={<Master />} />
             <Route path="/product" element={<Products />} />
+            <Route path="/ItemListManager" element={<ItemListManager />} />
             <Route path="/addproduct/:id?" element={<AddProduct />} />
           </Routes>
         </div>
