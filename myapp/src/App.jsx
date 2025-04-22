@@ -16,6 +16,7 @@ import RandomUserCard from './Component/TodoComponent';
 import SWRRandomUserCard from './Component/SWRRandomUserCard';
 import Master from './Component/Master';
 import Products from './Component/Products';
+import AddProduct from './Component/AddProduct';  
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link,NavLink } from "react-router-dom";
@@ -76,6 +77,7 @@ function App() {
             { <Route path="/SWRRandomUserCard" element={<SWRRandomUserCard />} />}
             <Route path="/master" element={<Master />} />
             <Route path="/product" element={<Products />} />
+            <Route path="/addproduct/:id?" element={<AddProduct />} />
           </Routes>
         </div>
       </div>
