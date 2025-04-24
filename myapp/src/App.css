@@ -8,3 +8,14 @@
     color: white !important;
     text-decoration: none;
   }
+  /* Light theme */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: black;
+  color: white;
+}
