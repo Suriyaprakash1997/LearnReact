@@ -20,6 +20,7 @@ import ItemListManager from './Component/ListManager';
 import AddProduct from './Component/AddProduct';  
 import UserProfile from './Component/UserProfile';  
 import LoginForm  from './Component/LoginForm';  
+import ReactMemo from './Component/React-memo';
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link,NavLink } from "react-router-dom";
