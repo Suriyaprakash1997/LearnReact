@@ -22,6 +22,7 @@ import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link,NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ReactMemo from './Component/ReactMemo';
 
 import  {AuthProvider}  from './context/AuthContext';
 
@@ -54,6 +55,7 @@ function App() {
             <li className="nav-item"><NavLink to="/master" className={({ isActive }) => isActive ? "active" : "nonactive"}>Master</NavLink></li>
             <li className="nav-item"><NavLink to="/product" className={({ isActive }) => isActive ? "active" : "nonactive"}>Product</NavLink></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ItemListManager">Item List</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/ReactMemo">React Memo</Link></li>
           </ul>
         </nav>
 
@@ -81,6 +83,7 @@ function App() {
             <Route path="/product" element={<Products />} />
             <Route path="/ItemListManager" element={<ItemListManager />} />
             <Route path="/addproduct/:id?" element={<AddProduct />} />
+            <Route path="/ReactMemo" element={<ReactMemo />} />
           </Routes>
         </div>
       </div>
