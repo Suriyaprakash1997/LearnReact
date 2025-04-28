@@ -20,15 +20,12 @@ import ItemListManager from './Component/ListManager';
 import AddProduct from './Component/AddProduct';  
 import UserProfile from './Component/UserProfile';  
 import LoginForm  from './Component/LoginForm';  
+import ReactMemo from './Component/React-memo';
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link,NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-<<<<<<< HEAD
-import ReactMemo from './Component/ReactMemo';
 
-=======
->>>>>>> 182aaccb9f91f54251f01ebdcf27a5fe388cf361
 import  {AuthProvider}  from './context/AuthContext';
 import TodoInput from './Component/TodoInput';  
 import TodoFilters from './Component/TodoFilters';  
