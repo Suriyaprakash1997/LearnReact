@@ -18,13 +18,21 @@ import Master from './Component/Master';
 import Products from './Component/Products';
 import ItemListManager from './Component/ListManager';
 import AddProduct from './Component/AddProduct';  
+import UserProfile from './Component/UserProfile';  
+import LoginForm  from './Component/LoginForm';  
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link,NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+<<<<<<< HEAD
 import ReactMemo from './Component/ReactMemo';
 
+=======
+>>>>>>> 182aaccb9f91f54251f01ebdcf27a5fe388cf361
 import  {AuthProvider}  from './context/AuthContext';
+import TodoInput from './Component/TodoInput';  
+import TodoFilters from './Component/TodoFilters';  
+import TodoList from './Component/TodoList';  
 
 function App() {
 
@@ -37,6 +45,11 @@ function App() {
           <h4>React App</h4>
           <ul className="nav flex-column">
             <li className="nav-item"><Link className="nav-link text-white" to="/HomeComponent">Home</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/TodoInput">TodoInput</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/TodoFilters">TodoFilters</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/TodoList">TodoList</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/UserProfile">User Profile</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/LoginForm">Login Form </Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ComponentClass">Class Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ComponentFunctional">Functional Component</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ImperativeDeclarative">Imperative & Declarative</Link></li>
@@ -63,6 +76,11 @@ function App() {
         <div className="flex-grow-1 p-4">
           <Routes>
             <Route  path="/HomeComponent" element={<HomeComponent />} />
+            <Route path="/TodoInput" element={<TodoInput />} />
+            <Route path="/TodoFilters" element={<TodoFilters />} />
+            <Route path="/TodoList" element={<TodoList />} />
+            <Route path="/UserProfile" element={<UserProfile/>} />
+            <Route path="/LoginForm" element={<LoginForm/>} />
             <Route path="/ComponentClass" element={<ComponentClass />} />
             <Route path="/ComponentFunctional" element={<ComponentFunctional />} />
             <Route path="/PropsState" element={<PropsState />} />
