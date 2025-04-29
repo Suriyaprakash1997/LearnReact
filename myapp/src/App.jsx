@@ -26,11 +26,11 @@ import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link,NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import  {AuthProvider}  from './context/AuthContext';
 import TodoInput from './Component/TodoInput';  
 import TodoFilters from './Component/TodoFilters';  
 import TodoList from './Component/TodoList';  
+import UseReducerHook from './Component/useReducerHook';
 
 function App() {
 
@@ -68,6 +68,7 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/ItemListManager">Item List</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ReactMemo">React Memo</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/LeaveForm">Leave Form</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/useReducer">useReducer</Link></li>
           </ul>
         </nav>
 
@@ -102,6 +103,7 @@ function App() {
             <Route path="/addproduct/:id?" element={<AddProduct />} />
             <Route path="/ReactMemo" element={<ReactMemo />} />
             <Route path="/LeaveForm" element={<LeaveForm />} />
+            <Route path="/useReducer" element={<UseReducerHook />} />
           </Routes>
         </div>
       </div>
