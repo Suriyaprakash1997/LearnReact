@@ -21,6 +21,7 @@ import AddProduct from './Component/AddProduct';
 import UserProfile from './Component/UserProfile';  
 import LoginForm  from './Component/LoginForm';  
 import ReactMemo from './Component/React-memo';
+import LeaveForm from './Component/EmployeeLeaveForm';
 import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link,NavLink } from "react-router-dom";
@@ -66,6 +67,7 @@ function App() {
             <li className="nav-item"><NavLink to="/product" className={({ isActive }) => isActive ? "active" : "nonactive"}>Product</NavLink></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ItemListManager">Item List</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/ReactMemo">React Memo</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/LeaveForm">Leave Form</Link></li>
           </ul>
         </nav>
 
@@ -99,6 +101,7 @@ function App() {
             <Route path="/ItemListManager" element={<ItemListManager />} />
             <Route path="/addproduct/:id?" element={<AddProduct />} />
             <Route path="/ReactMemo" element={<ReactMemo />} />
+            <Route path="/LeaveForm" element={<LeaveForm />} />
           </Routes>
         </div>
       </div>
