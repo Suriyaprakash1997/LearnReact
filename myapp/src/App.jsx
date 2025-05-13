@@ -31,6 +31,8 @@ import TodoInput from './Component/TodoInput';
 import TodoFilters from './Component/TodoFilters';  
 import TodoList from './Component/TodoList';  
 import UseReducerHook from './Component/useReducerHook';
+import WithoutLazy from './Component/Lazy Loading/WithoutLazy';
+import WithLazy from './Component/Lazy Loading/WithLazy';
 
 function App() {
 
@@ -69,6 +71,8 @@ function App() {
             <li className="nav-item"><Link className="nav-link text-white" to="/ReactMemo">React Memo</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/LeaveForm">Leave Form</Link></li>
             <li className="nav-item"><Link className="nav-link text-white" to="/useReducer">useReducer</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/WithoutLazy">Without Lazy</Link></li>
+            <li className="nav-item"><Link className="nav-link text-white" to="/WithLazy">With Lazy</Link></li>
           </ul>
         </nav>
 
@@ -104,6 +108,8 @@ function App() {
             <Route path="/ReactMemo" element={<ReactMemo />} />
             <Route path="/LeaveForm" element={<LeaveForm />} />
             <Route path="/useReducer" element={<UseReducerHook />} />
+            <Route path="/WithoutLazy" element={<WithoutLazy />} />
+            <Route path="/WithLazy" element={<WithLazy />} />
           </Routes>
         </div>
       </div>

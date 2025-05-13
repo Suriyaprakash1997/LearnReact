@@ -19,3 +19,42 @@ body.dark {
   background-color: black;
   color: white;
 }
+.container {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card.heavy {
+  background-color: #fef6f6;
+}
+
+.load-btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.load-btn:hover {
+  background-color: #0056b3;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 1rem;
+}
